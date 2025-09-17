@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v4
 
       - uses: actions/setup-node@v4
@@ -28,13 +28,16 @@ jobs:
 
       # Build PDFs step with error capture
       - name: Build PDFs
-        id: build_pdfs
         run: |
-          set -o pipefail
-          myst build --typst 2> >(tee build_errors.log >&2) || true
-          if [ -s build_errors.log ]; then
-            echo "### Errors during PDF build:" >> $GITHUB_STEP_SUMMARY
-            cat build_errors.log >> $GITHUB_STEP_SUMMARY
+          set -euo pipefail
+          myst build --typst 2> build_stderr.log || status=$?
+          : "${status:=0}"
+          if [ -s build_stderr.log ]; then
+            echo "### Build stderr" >> $GITHUB_STEP_SUMMARY
+            cat build_stderr.log >> $GITHUB_STEP_SUMMARY
+          fi
+          # Fail only if stderr contains “error”
+          if grep -qiE '\berror\b' build_stderr.log || [ "$status" -ne 0 ]; then
             exit 1
           fi
 
