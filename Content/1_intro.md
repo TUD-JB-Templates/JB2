@@ -1,6 +1,40 @@
 # Introduction
 
-This is the TUD JB2 template to produce your own online interactive textbook. 
+// korte introductie JB 2
+
+::: {table} Verschillende templates
+:label: tbl:comparison
+
+<table style="border-collapse: collapse; width: 100%;">
+
+  <tr>
+    <th style="text-align: center">JB 1</th>
+    <th style="border-left: 2px solid green; border-right: 2px solid green; border-top: 2px solid green; text-align: center;">JB 2</th>
+    <th style="text-align: center">TB</th>
+  </tr>
+  
+  <tr>
+    <td style="text-align: center"> 
+    Voordelen en nadelen
+    </td>
+    <td style="border-left: 2px solid green; border-right: 2px solid green; text-align: center;">
+    Voordelen en nadelen
+    </td>
+    <td style="text-align: center">
+    Voordelen en nadelen
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center"> <a href="https://tud-jb-templates.github.io/OIT-JB/intro.html"> Naar JB1 </td>
+    <td style="border-left: 2px solid green; border-right: 2px solid green; border-bottom: 2px solid green; text-align: center;"> Current </td>
+    <td style="text-align: center"> <a href="https://tud-jb-templates.github.io/TB/main/intro.html"> Naar TB </a> </td>
+  </tr>
+
+</table>
+:::
+
+
 
 ## Set up your own repository
 Follow these instruction to use this template for your own book.
