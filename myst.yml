@@ -30,7 +30,7 @@ project:
     - file: Content/index.md
     - file: Content/1_intro.md
     - file: Content/2_template.md
-    - file: Content/2_features.md
+    # - file: Content/2_features.md
     # - file: Content/3_stylesheet.md
     - file: Content/3_cheat_sheet.md
     - file: Content/4_pdfoutput.md
