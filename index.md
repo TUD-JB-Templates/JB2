@@ -8,7 +8,7 @@ site:
 
 <div style="text-align: center">
 
-# Template
+# Template for TU Delft Jupyter Book 2 
 
 </div>
 

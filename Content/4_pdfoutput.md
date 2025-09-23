@@ -1,18 +1,17 @@
 # JB 2 Template
+## PDF with LaTeX or Typst
 
-## PDF met Latex of Typst 
-
-Om aan te geven welk type PDF je wilt bouwen, zet je dit in je `myst.yml` bestand onder `exports`.  
-Bijvoorbeeld:
+To specify which type of PDF you want to build, add this to your `myst.yml` file under `exports`.  
+For example:
 
 ```yaml
 exports:
-  - format: pdf      # Voor LaTeX export
+  - format: pdf      # For LaTeX export
     output: exports/book.pdf
-  - format: typst    # Voor Typst export
+  - format: typst    # For Typst export
     output: exports/book.pdf
 ```
 
-Ga naar Actions > klik op "Myst PDF Builder [LaTeX]" of "Myst PDF Builder [Typst]" > klik op "Run workflow" > klik op "Run workflow" in dropdown.
+Go to Actions > click on "Myst PDF Builder [LaTeX]" or "Myst PDF Builder [Typst]" > click on "Run workflow" > click on "Run workflow" in the dropdown.
 
-Een eventuele error voor de Typst action komt in de summary te staan. 
+Any error for the Typst action will appear in the summary.
