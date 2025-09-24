@@ -39,27 +39,15 @@ jobs:
         run: npm install -g mystmd
 
       # testing date
-      - name: Genereer datum en zet weg in bestand
+      - name: Genereer datum en schrijf weg
         run: |
           mkdir -p export
-          date +"%Y-%m-%d %H:%M:%S" > export/date.txt
+          date +"%Y-%m-%d" > export/date.txt
 
-      - name: Toon inhoud (debug)
-        run: cat export/date.txt
-
-      - name: Upload artifact (optioneel)
-        uses: actions/upload-artifact@v4
-        with:
-          name: date-file
-          path: export/date.txt
-
-      - name: Commit en push date.txt
+      - name: Zet datum in myst.yml
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add export/date.txt
-          git commit -m "Update date.txt"
-          git push
+          DATE=$(cat export/date.txt)
+          yq e -i ".date = \"$DATE\"" myst.yml
       # end of test 
 
       - name: Build HTML Assets
