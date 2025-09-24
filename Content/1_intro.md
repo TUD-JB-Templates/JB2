@@ -12,7 +12,7 @@ Whether JB2 is the right choice for you depends on your specific needs. Below is
 - Newest technology, still in development
 - Used in science publication
 
-**Drawbacks:**
+**cons**
 - Not all functionality from JB1 is available (yet)
 - In browser Python is not editable
 - Not full control of style
@@ -23,7 +23,7 @@ Whether JB2 is the right choice for you depends on your specific needs. Below is
 - Bare bone version
 - Software developed and support by JB1 developers
 
-**Drawbacks:**
+**cons**
 - Full software installation to see output
 - No full control unless coded yourself
 - Difficult to set up
@@ -36,7 +36,7 @@ Whether JB2 is the right choice for you depends on your specific needs. Below is
 - Additional functionality built by teachers
 - Full customizable through CSS
 
-**Drawbacks:**
+**cons**
 - Understanding all possibilities and functionalities
 - Connecting Github and Gitlab to comply with TUD publishing regulations (but possible)
 - PDF export suboptimal
