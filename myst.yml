@@ -7,7 +7,7 @@ project:
   # keywords: []
   authors: [Freek Pols]
   # abstract: Optional
-  date: 2025-02-02 #export/date.txt
+  date: ${BUILD_DATE} 
   github: https://github.com/TUD-JB-Templates/JB2 # Change this URL to your GitHub repository
 
   plugins: 

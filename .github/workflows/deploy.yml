@@ -39,15 +39,8 @@ jobs:
         run: npm install -g mystmd
 
       # testing date
-      - name: Genereer datum en schrijf weg
-        run: |
-          mkdir -p export
-          date +"%Y-%m-%d" > export/date.txt
-
-      - name: Zet datum in myst.yml
-        run: |
-          DATE=$(cat export/date.txt)
-          yq e -i ".date = \"$DATE\"" myst.yml
+      - name: Zet build date als env var
+        run: echo "BUILD_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       # end of test 
 
       - name: Build HTML Assets
