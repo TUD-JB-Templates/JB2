@@ -1,0 +1,280 @@
+aside.danger, 
+ aside.error {
+  border-color: var(--tud-red);
+  background-color: var(--tud-red-min);
+}
+aside.danger > div:first-child,
+ aside.error > div:first-child {
+  background-color: var(--tud-red-mid);
+}
+div.admonition.danger > div:first-child::after,
+ div.admonition.error > div:first-child::after {
+  color: var(--tud-red);
+}
+
+.myst-admonition-attention, .myst-admonition-warning, .myst-admonition-important, .myst-admonition-caution {
+  border-color: var(--tud-orange);
+  background-color: var(--tud-orange-min);
+}
+
+/* Admonition Caution, Warning, Attention, Important */
+aside.caution, aside.warning, aside.attention, aside.important {
+  border-color: var(--tud-orange);
+  background-color: var(--tud-orange-min);
+}
+.myst-admonition-attention > div:first-child,
+.myst-admonition-warning > div:first-child,
+.myst-admonition-important > div:first-child,
+.myst-admonition-caution > div:first-child {
+  background-color: var(--tud-orange-mid);
+}
+.myst-admonition-caution > div:first-child::after,
+.myst-admonition-warning > div:first-child::after,
+.myst-admonition-attention > div:first-child::after,
+.myst-admonition-important > div:first-child::after {
+  color: var(--tud-orange);
+}
+
+/* Admonition Hint, Note, SeeAlso, Tip, Remark */
+.myst-admonition-hint, .myst-admonition-note, 
+  .myst-admonition-seealso, .myst-admonition-tip, .myst-admonition-remark {
+  border-color: var(--tud-green);
+  background-color: var(--tud-green-min);
+}
+.myst-admonition-hint > div:first-child,
+.myst-admonition-note > div:first-child,
+.myst-admonition-seealso > div:first-child,
+.myst-admonition-tip > div:first-child,
+.myst-admonition-remark > div:first-child  {
+  background-color: var(--tud-green-mid);
+}
+
+.myst-admonition-hint > div:first-child::after,
+.myst-admonition-note > div:first-child::after,
+.myst-admonition-seealso > div:first-child::after,
+.myst-admonition-tip > div:first-child::after,
+.myst-admonition-remark > div:first-child::after {
+  color: var(--tud-green);
+}
+
+/* Admonitions important */
+
+.myst-admonition-important {
+  border-color: var(--tud-orange);
+  background-color: var(--tud-orange-min);
+}
+.myst-admonition-important > div:first-child {
+  background-color: var(--tud-orange-mid);
+}
+
+.myst-admonition-important > div:first-child > svg {
+  fill: var(--tud-orange);
+}
+
+ /* Admonition class */
+aside.admonition {
+  border-color: var(--tud-cyan);
+  background-color: var(--tud-cyan-min);
+}
+aside.admonition > div:first-child {
+  background-color: var(--tud-cyan-mid);
+}
+aside.admonition > div:first-child::after {
+  color: var(--tud-cyan);
+}
+
+/* PROOFS PRF:... */
+/* As we are unable to add classes to proofs, we target the id's */
+/* Every prf:xyz must have :label: xyz-... where any text can be added to distinguish different proofs */
+
+/* prf:proof */
+
+aside[id^="proof-"] {
+  background-color: var(--tud-cyan-min);
+  border-left: .2rem solid lightgrey;
+  border-radius: .25rem;
+}
+
+aside[id^="proof-"] > div:first-child {
+  display: none;
+}
+
+
+/* prf:solution */
+aside[id^="solution-"] {
+  background-color: var(--tud-purple-min);
+  border-left: .2rem solid var(--tud-purple);
+  border-radius: .25rem;
+}
+aside[id^="solution-"] > .div:first-child {
+  background-color: var(--tud-purple-mid);
+}
+
+
+/* prf:definition */
+
+aside[id^="definition-"] {
+  background-color: var(--tud-blue-min);
+  border-left: .2rem solid var(--tud-blue);
+  border-radius: .25rem;
+}
+aside[id^="definition-"] > div:first-child {
+  background-color: var(--tud-blue-mid);
+}
+
+/* prf: (Theorem, Lemma, Preposition, Corollary, Criterion)  */
+aside[id^="theorem-"],
+ aside[id^="criterion-"],
+  aside[id^="lemma-"],
+   aside[id^="proposition-"], 
+    aside[id^="corollary-"] {
+      background-color: var(--tud-darkGreen-min);
+      border-left: .2rem solid var(--tud-darkGreen);
+      border-radius: .25rem;
+}
+
+aside[id^="theorem-"] > div:first-child,
+  aside[id^="criterion-"] > div:first-child,
+   aside[id^="lemma-"] > div:first-child,
+    aside[id^="proposition-"] > div:first-child,
+     aside[id^="corollary-"] > div:first-child {
+      background-color: var(--tud-darkGreen-mid);
+}
+  
+/* prf: (Axiom, Conjecture, Assumption) */
+aside[id^="axiom-"], 
+  aside[id^="assumption-"],
+  aside[id^="conjecture-"]{
+  background-color: var(--tud-red-min);
+  border-left: .2rem solid var(--tud-red);
+  border-radius: .25rem;
+}
+aside[id^="axiom-"] > div:first-child,
+  aside[id^="assumption-"] > div:first-child,
+  aside[id^="conjecture-"] > div:first-child{
+  background-color: var(--tud-red-mid);
+}
+
+/* prf: (Property, Observation) */
+aside[id^="property-"],
+ aside[id^="observation-"]{
+    background-color: var(--tud-orange-min);
+    border-left: .2rem solid var(--tud-orange);
+    border-radius: .25rem;
+  }
+aside[id^="property-"] > div:first-child,
+  aside[id^="observation-"] > div:first-child{
+    background-color: var(--tud-orange-mid);
+}
+
+/* prf:Algorithm */
+
+aside[id^="algorithm-"] {
+  background-color: var(--tud-darkBlue-min);
+  /* border-left: .2rem solid var(--tud-darkBlue); */
+  border-radius: .25rem;
+}
+aside[id^="algorithm-"] > div:first-child {
+  background-color: var(--tud-darkBlue-mid);
+  border-top: .15rem solid var(--tud-darkBlue-mid);
+  border-bottom: .15rem solid var(--tud-darkBlue-mid);
+}
+  
+/* prf:Example */
+aside[id^="example-"] {
+  background-color: var(--tud-yellow-min);
+  border-left: .2rem solid var(--tud-yellow);
+  border-radius: .25rem;
+}
+aside[id^="example-"] > div:first-child {
+  background-color: var(--tud-yellow-mid);
+}
+
+ /* BUTTON */
+a.button{
+  color: #FFFFFF !important;
+  background-color: var(--tud-cyan) !important;
+  border-color: var(--tud-cyan) !important;
+}
+
+/* EXERCISE AND SOLUTION */
+
+aside[id^="exercise-"] {
+  border-left: .2rem solid var(--tud-raspberry);
+  border-radius: .25rem;
+  background-color: var(--tud-raspberry-min);
+}
+
+aside[id^="exercise-"] > div:first-child {
+  background-color: var(--tud-raspberry-mid);
+}
+
+/* Solution */
+aside[id^="solution-"] {
+  border-color: var(--tud-purple);
+  background-color: var(--tud-purple-min);
+}
+aside[id^="solution-"] > div:first-child  {
+  color: var(--tud-purple);
+  background-color: var(--tud-purple-mid);
+}
+
+aside[id^="solution-"] > div:first-child > div:first-child > span {
+  color: black; /* Makes only the <p> element and its content visible */
+}
+
+/* <a> elemts in for example the menubar on the side */
+
+html {
+  --pst-color-primary: var(--tud-cyan) !important;
+  --pst-color-secondary: var(--tud-green) !important;
+  --pst-color-table-row-hover-bg: var(--tud-raspberry-mid) !important;
+}
+
+/* if <a> element has aria-current:"page" then make text pst-color-primary */
+a[aria-current="page"] {
+  color: var(--pst-color-primary) !important;
+  background-color: white;
+}
+
+/* If not, make text colour secondary on hover */
+a:hover:not([aria-current="page"]) {
+  color: var(--pst-color-secondary) !important;
+}
+
+/* Class prev next title */
+.prev-next-title {
+  color: var(--pst-color-primary) !important;
+}
+
+/* Override text-blue-800 to pst-color-primary */
+/* This colour seems to be only used in the TOC.  */
+.text-blue-800 {
+  color: black; /* I set this to black as this is the case in the jb1 stylesheet */
+}
+
+li > .text-blue-600 {
+  color: var(--pst-color-primary) !important;
+}
+
+li.border-l-blue-500 {
+  border-color: var(--pst-color-primary) !important;
+}
+
+li > a {
+  background: white !important;
+}
+/* Colours as classes */
+
+.tud-red {color: var(--tud-red);}
+.tud-blue {color: var(--tud-blue);}
+.tud-green {color: var(--tud-green);}
+.tud-tud-raspberry {color: var(--tud-raspberry);}
+.tud-yellow {color: var(--tud-yellow);}
+.tud-darkGreen {color: var(--tud-darkGreen);}
+.tud-orange {color: var(--tud-orange);}
+.tud-cyan {color: var(--tud-cyan);}
+.tud-gray {color: var(--tud-gray);}
+.tud-purple {color: var(--tud-purple);}
+.tud-pink {color: var(--tud-pink);}
+.tud-darkBlue {color: var(--tud-darkBlue);} */
