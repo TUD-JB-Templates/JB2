@@ -17,6 +17,11 @@ project:
     - plugins/intermezzo.mjs
     - plugins/pdf_iframe.mjs
 
+  options:
+    cover: Figures/Cover.PNG
+    logo: Figures/logo.png
+    ToC_depth: 1
+
   downloads:
     - id: output-pdf
   exports:

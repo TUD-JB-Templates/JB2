@@ -5,12 +5,15 @@ To specify which type of PDF you want to build, add this to your `myst.yml` file
 For example:
 
 ```yaml
+downloads:
+  - id: output-pdf
 exports:
-  - format: pdf      # For LaTeX export
-    output: exports/book.pdf
-  - format: typst    # For Typst export
-    output: exports/book.pdf
+  - format: typst
+    template: ./TUD_pdf_temp
+    output: exports/book2.pdf
+    id: output-pdf
 ```
+
 
 Go to Actions > click on "Myst PDF Builder [LaTeX]" or "Myst PDF Builder [Typst]" > click on "Run workflow" > click on "Run workflow" in the dropdown.
 
