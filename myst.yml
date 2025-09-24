@@ -41,7 +41,7 @@ project:
     - file: Content/4_pdfoutput.md
     
 site:
-  template: book-theme
+  template: article-theme
   options:
     favicon: favicon.ico
     style: ./css/TUD_stylesheet.css
