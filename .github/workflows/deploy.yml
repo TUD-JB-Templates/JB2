@@ -38,17 +38,16 @@ jobs:
       - name: Install MyST Markdown
         run: npm install -g mystmd
 
-      # testing date
-      - name: Genereer build date en vervang in myst.yml
+      # setting the date to today
+      - name: generate date
         shell: bash
         run: |
-          BUILD_DATE="$(date +'%Y-%m-%d')"
-          # vervang letterlijk de placeholder ${BUILD_DATE}
+          BUILD_DATE="$(date +'%Y-%m-%d')"          
           sed -i "s|\${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
           echo "myst.yml:"
           grep -nE '^\s*date:' myst.yml
-      # end of test 
-
+      
+      # building the HTML
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
