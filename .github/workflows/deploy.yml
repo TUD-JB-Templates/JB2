@@ -39,17 +39,14 @@ jobs:
         run: npm install -g mystmd
 
       # testing date
-      - name: Genereer datum en schrijf in myst.yml (runtime)
+      - name: Genereer build date en vervang in myst.yml
+        shell: bash
         run: |
-          mkdir -p export
-          DATE="$(date +'%Y-%m-%d')"
-          echo "$DATE" > export/date.txt
-          if grep -qE '^\s*date:' myst.yml; then
-            sed -i -E "s|^\s*date:.*|date: ${DATE}|" myst.yml
-          else
-            printf "\ndate: %s\n" "${DATE}" >> myst.yml
-          fi
-          echo "myst.yml date -> ${DATE}"
+          BUILD_DATE="$(date +'%Y-%m-%d')"
+          # vervang letterlijk de placeholder ${BUILD_DATE}
+          sed -i "s|\${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
+          echo "myst.yml:"
+          grep -nE '^\s*date:' myst.yml
       # end of test 
 
       - name: Build HTML Assets
