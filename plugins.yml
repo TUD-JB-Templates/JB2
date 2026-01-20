@@ -1,0 +1,6 @@
+version: 1
+project:
+  plugins: 
+    - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updated/page-last-updated.mjs
+    - https://github.com/jupyter-book/myst-plugins/releases/download/exercise-and-solution-pdf/exercise-admonition-pdf.mjs
+    - https://github.com/jupyter-book/myst-plugins/releases/download/Admonitions/example-admonition.mjs
