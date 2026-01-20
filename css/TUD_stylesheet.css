@@ -1,6 +1,10 @@
 /* TODO
 - topic
 */
+#skip-to-frontmatter {
+  margin-bottom: 0;
+  order: -2; /* Keep the original date first */
+}
 
 /* Code toegevoegd 17/05. Leuke kleurtjes zodat het makkelijk te zien is wat waar komt */
 .heading-text {
