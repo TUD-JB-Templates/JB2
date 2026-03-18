@@ -17,9 +17,10 @@ extends:
 site:
   template: book-theme
   options:
-    favicon: favicon.ico
-    style: ./css/TUD_stylesheet.css
-    logo: Figures/logo.png
+    favicon: style/favicon.ico
+    style: style/TUD_stylesheet.css
+    logo: style/tudelft.png
+    logo_dark: style/tudelft-dark.png
     folders: false
   
   actions:
