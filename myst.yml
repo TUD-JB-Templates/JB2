@@ -22,6 +22,8 @@ site:
     logo: style/tudelft.png
     logo_dark: style/tudelft-dark.png
     folders: false
+  parts:
+    footer: style/footer.md
   
   actions:
     - title: report issue
