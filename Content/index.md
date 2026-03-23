@@ -20,7 +20,7 @@ a quick setup for your open publishing project.
 Originally created by  
 *Freek Pols*
 
-![](../Figures/Cover.png)
+![](../Figures/Cover.PNG)
 
 +++
 
