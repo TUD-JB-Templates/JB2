@@ -43,9 +43,10 @@ Want your own project? Visit our [starterkit](https://github.com/TUD-JB-OS/start
 :::
 
 :::{div}
-
 ![](tudelft-dark.png)
 :::
+
+
 
 ::::
 

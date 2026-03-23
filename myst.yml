@@ -6,7 +6,7 @@ project:
   # keywords: []
   authors: [Freek Pols]
   # abstract: Optional
-  date: ${BUILD_DATE} 
+  date: 2026-03-23 
   github: https://github.com/TUD-JB-Templates/JB2 # Change this URL to your GitHub repository
 
 extends:
@@ -18,7 +18,7 @@ site:
   template: book-theme
   options:
     favicon: style/favicon.ico
-    style: style/TUD_stylesheet.css
+    style: style/custom.css
     logo: style/tudelft.png
     logo_dark: style/tudelft-dark.png
     folders: false

@@ -158,3 +158,58 @@ display: block;
 .updated-date-container {
   order: -1; /* Move it visually below the date */
 }
+
+
+.footer {
+  /* Make footer "sticky" to page bottom (also the above flex rules), per
+   * the flexbox strategy described here:
+   * 	https://css-tricks.com/couple-takes-sticky-footer/#aa-there-is-flexbox
+   * and here:
+   *    https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+   * This solution does not require hardcoding a fixed footer height in the
+   * style rules.
+   */
+  flex-shrink: 0;
+  background: #0C2340;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+
+  /* Outer content grid */
+  & .outer-grid {
+    /* spacer, project description, spacer, link columns, spacer */
+    grid-template-columns: 3fr 3fr 4fr;
+    align-items: center;
+    margin-bottom: 0rem;
+
+    & li {
+      list-style: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    & .outer-grid {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+
+  /* Heading colours */
+  & a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
+
+  & h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
