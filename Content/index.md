@@ -6,14 +6,21 @@ site:
   hide_title_block: true
 ---
 
-<div style="text-align: center">
 
-# Template for TU Delft Jupyter Book 2 
++++ { "kind": "split-image" }
 
-</div>
+## Template for TU Delft Jupyter Book 2 
 
-```{figure} ../Figures/Cover.PNG
-:width: 80%
-:align: center
-```
+a quick setup for your open publishing project.
+
+{button}`Use this template <https://github.com/TUD-JB-Templates/JB2>`  
+
+Originally created by  
+*Freek Pols*
+
+![](../Figures/Cover.png)
+
++++
+
+
 
