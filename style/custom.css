@@ -1,7 +1,9 @@
 
 
 
-
+body {
+  font-family: "Roboto Slab", Arial, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
 
 /*Title color in dark mode*/
 .dark aside.admonition-experiment .dark\:text-white {
